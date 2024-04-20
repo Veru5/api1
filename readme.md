@@ -35,25 +35,17 @@ http://www.smate.cz/controller.php?action=getData
 
 Odpověď API bude ve formátu JSON a bude obsahovat seznam záznamů z databáze. Každý záznam bude reprezentován jako objekt obsahující klíče a hodnoty odpovídající sloupcům v databázi.<br>
 
-[
-    {
-        "id": 14,
-        "url": "https://www.grafika.cz/",
-        "title": "Grafika.cz - vše o počítačové grafice",
-        "meta_description": "Internetový magazín o grafice, polygrafii a digitálních technologiích. Součástí serveru je diskuzní fórum, bazar, systém práce, galerie a další služby.",
-        "datetime_column": "2024-04-14 09:16:50",
-        "user_id": 28
-    },
-    {
-        "id": 11,
-        "url": "www.onlinejazyky.cz",
-        "title": "OnlineJazyky",
-        "meta_description": "Online jazykové kurzy pro začátečníky, pokročilé a různé profese. Atraktivní, zábavná a jednoduchá angličtina, francouzština, němčina a španělština.",
-        "datetime_column": "2024-04-11 12:16:57",
-        "user_id": 26
-    },
-    ...
-]
+[<br>
+    {<br>
+        "id": 14,<br>
+        "url": "https://www.grafika.cz/",<br>
+        "title": "Grafika.cz - vše o počítačové grafice",<br>
+        "meta_description": "Internetový magazín o grafice, polygrafii a digitálních technologiích. Součástí serveru je diskuzní fórum, bazar, systém práce, galerie a další služby.",<br>
+        "datetime_column": "2024-04-14 09:16:50",<br>
+        "user_id": 28<br>
+    },<br>
+    ...<br>
+]<br>
 
 ## Parametry
 
