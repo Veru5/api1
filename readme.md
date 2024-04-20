@@ -17,7 +17,54 @@ Tento projekt demonstruje zobrazení dat z databáze na webové stránce.
 
 ## Poznámky
 
-Používá se PHP a CURL pro načítání dat z API endpointu.<br>
-Data se z JSON formátu dekódují do asociativního pole.<br>
-Data se zobrazují v tabulce HTML.<br>
-AJAX se používá pro asynchronní načítání dat bez nutnosti opakovaného načtení stránky.
+-Používá se PHP a CURL pro načítání dat z API endpointu.<br>
+-Data se z JSON formátu dekódují do asociativního pole.<br>
+-Data se zobrazují v tabulce HTML.<br>
+-AJAX se používá pro asynchronní načítání dat bez nutnosti opakovaného načtení stránky.<br>
+
+# Návod pro developery
+
+Tento návod popisuje způsob použití API tohoto projektu. API poskytuje možnost získání dat z databáze ve formátu JSON pomocí HTTP požadavků.
+
+## Získání dat
+
+Pro získání dat z API proveďte HTTP GET požadavek na následující URL:<br>
+http://www.smate.cz/controller.php?action=getData
+
+## Formát odpovědi
+
+Odpověď API bude ve formátu JSON a bude obsahovat seznam záznamů z databáze. Každý záznam bude reprezentován jako objekt obsahující klíče a hodnoty odpovídající sloupcům v databázi.<br>
+
+[
+    {
+        "id": 14,
+        "url": "https://www.grafika.cz/",
+        "title": "Grafika.cz - vše o počítačové grafice",
+        "meta_description": "Internetový magazín o grafice, polygrafii a digitálních technologiích. Součástí serveru je diskuzní fórum, bazar, systém práce, galerie a další služby.",
+        "datetime_column": "2024-04-14 09:16:50",
+        "user_id": 28
+    },
+    {
+        "id": 11,
+        "url": "www.onlinejazyky.cz",
+        "title": "OnlineJazyky",
+        "meta_description": "Online jazykové kurzy pro začátečníky, pokročilé a různé profese. Atraktivní, zábavná a jednoduchá angličtina, francouzština, němčina a španělština.",
+        "datetime_column": "2024-04-11 12:16:57",
+        "user_id": 26
+    },
+    ...
+]
+
+## Parametry
+
+API nepodporuje žádné další parametry v URL adrese pro získání dat. Všechna data jsou vrácena v plném rozsahu bez možnosti filtru nebo stránkování.
+
+## Chybové kódy
+
+V případě chyby bude API vracet odpovídající chybový kód spolu s popisem chyby v těle odpovědi. Níže jsou uvedeny možné chybové kódy: <br>
+
+-400 Bad Request: Požadavek obsahuje neplatné parametry.<br>
+-404 Not Found: Požadovaný zdroj nebyl nalezen.<br>
+-500 Internal Server Error: Interní chyba serveru.<br>
+
+
