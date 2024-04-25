@@ -29,7 +29,7 @@ Tento návod popisuje způsob použití API tohoto projektu. API poskytuje možn
 ## Získání dat
 
 Pro získání dat z API proveďte HTTP GET požadavek na následující URL:<br>
-http://www.smate.cz/controller.php?action=getData
+http://www.smate.cz/db-server.php?action=getData
 
 ## Formát odpovědi
 
